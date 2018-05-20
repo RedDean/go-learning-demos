@@ -36,10 +36,11 @@ func (s *Server) MsgAccepter(conn net.Conn) {
 
 		if bytesnum != 0 {
 		   msg := string(input[:bytesnum])
-			if strings.ToUpper(msg) == "QUIT" {
-				s.QuitQueue <- true
-			}
-		   s.MessageQueue <- msg
+		   if strings.ToUpper(msg) == "QUIT" {
+		       s.QuitQueue <- true
+		   }else {
+		   	   s.MessageQueue <- msg
+		   }
 		}
 	}
 }
