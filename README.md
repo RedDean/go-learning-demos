@@ -5,3 +5,5 @@
 还有其他一些的例子
 
 [go搭建rest服务](https://github.com/RedDean/go-restapp-demo)
+
+[并发笔记](./concurrency.md)
